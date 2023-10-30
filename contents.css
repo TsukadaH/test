@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333; 
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  color: #fff; 
+  position: relative;
+}
+
+.header {
+  position: relative;
+  height: 200px;  
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.card {
+  flex: 0 0 calc(33.3333% - 20px);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card .title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.description {
+  display: none;
+  margin-top: 20px;
+  position: relative; 
+  padding-bottom: 60px; 
+}
+
+.description .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description .text {
+  margin-left: 20px;
+}
+
+.description .text h2 {
+  margin-top: 0;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .description .text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+button {
+  position: fixed;
+  bottom: 20px; 
+  left: 0;
+  width: 100%;
+  background-color: #fff; 
+  color: #333;
+}
+
+.overlay-text {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(20vw / 3);
+  color: white;
+  pointer-events: none;
+}
