@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contents.css">
+  <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-17/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-17/css/5-17.css">
+  <title>大学祭</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <canvas id="particle"></canvas>
+    </div>
+    <div class="content">
+      <div class="overlay-text">contents</div>
+      <div class="grid" id="grid">
+        <div class="card" onclick="showDescription('ai-girlfriend')">
+          <img src="gallery/ai-girlfriend.jpg" alt="AI彼女">
+          <div class="title">AI彼女</div>
+        </div>
+        <div class="card" onclick="showDescription('chat-gpt-fortune-telling')">
+          <img src="gallery/chat-gpt-fortune-telling.jpg" alt="チャットGPT 占い">
+          <div class="title">チャットGPT 占い</div>
+        </div>
+        <div class="card" onclick="showDescription('ai-consultation')">
+          <img src="gallery/ai-consultation.jpg" alt="AI 相談">
+          <div class="title">AI 相談</div>
+        </div>
+        <div class="card" onclick="showDescription('music-band')">
+          <img src="gallery/music-band.jpg" alt="音楽隊">
+          <div class="title">音楽隊</div>
+        </div>
+        <div class="card" onclick="showDescription('miss-contest')">
+          <img src="gallery/miss-contest.jpg" alt="ミスコン">
+          <div class="title">ミスコン</div>
+        </div>
+      </div>
+      <div class="description" id="description">
+        <div class="image">
+          <img id="description-image" src="" alt="">
+        </div>
+        <div class="text">
+          <h2 id="description-title"></h2>
+          <p id="description-content"></p>
+        </div>
+        <button class="button" onclick="closeDescription()">閉じる</button>
+      </div>
+    </div>
+  </div>
+  <script src="contents.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+</body>
+</html>
